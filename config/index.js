@@ -1,4 +1,5 @@
 const Sequelize = require('sequelize')
+require("dotemv").config()
 let sequelize
 
 if (process.env.NODE_ENV === 'production') {

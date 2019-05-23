@@ -1,7 +1,8 @@
 module.exports = (sequelize, Sequelize) => {
     class BookClub extends Sequelize.Model { }
     BookClub.init({
-        // columns go here
+      name: Sequelize.STRING,
+      books: Sequelize.STRING    
     },
       {
         sequelize,

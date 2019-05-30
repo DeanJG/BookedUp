@@ -2,6 +2,14 @@ import React, { Component } from 'react'
 import './App.css'
 
 class App extends Component {
+  getBooks = () => {
+    console.log('hi nina')
+    fetch('http://localhost:4000/books')
+      .then(r => r.json())
+      .then(books => console.log(books))
+        .catch(e => console.log(e))
+  }
+
   render() {
     return (
       <div>
@@ -19,6 +27,7 @@ class App extends Component {
           <div style={{ textAlign: 'center' }}>
             <button style={{ margin: '12px' }} onClick={this.login}>Login</button>
             <button style={{ margin: '12px' }} onClick={this.Signup}>Signup</button>
+            <button style={{ margin: '12px' }} onClick={this.getBooks}>Books</button>
           </div>
         </div>
       </div>

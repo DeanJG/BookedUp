@@ -1,13 +1,27 @@
 module.exports = (sequelize, Sequelize) => {
     class Book extends Sequelize.Model { }
     Book.init({
-      title: Sequelize.STRING,
-      author: Sequelize.STRING,
-      genre: Sequelize.STRING,
+      title: {
+        type: Sequelize.STRING,
+        notNull: true,
+        isAlphanumeric: true,
+      },
+      author: {
+        type: Sequelize.STRING,
+        notNull: true,
+        isAlpha: true,
+      },
+      genre: {
+        type: Sequelize.STRING,
+        isAlpha: true
+      },
       year_published: Sequelize.INTEGER,
-      rating: Sequelize.INTEGER,
-      synopsis: Sequelize.STRING,
-      cover: Sequelize.STRING
+      rating: Sequelize.FLOAT(1,4),
+      synopsis: Sequelize.STRING(500),
+      cover: {
+        type: Sequelize.STRING,
+        notNull: true
+      }
     },
       {
         sequelize,

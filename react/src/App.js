@@ -5,6 +5,20 @@ import Profile from './components/Profile'
 import Search from './components/Search'
 import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom' 
 import './App.css'
+import firebase from 'firebase'
+
+  // Your web app's Firebase configuration
+  const firebaseConfig = {
+    apiKey: "AIzaSyC9NWKKTfx1jpU4V3uLb9n1GEs5lhUC0rY",
+    authDomain: "booked-up.firebaseapp.com",
+    databaseURL: "https://booked-up.firebaseio.com",
+    projectId: "booked-up",
+    storageBucket: "booked-up.appspot.com",
+    messagingSenderId: "760422446689",
+    appId: "1:760422446689:web:c144ce52486f0369"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
 
 class App extends Component {
   getBooks = () => {

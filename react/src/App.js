@@ -1,4 +1,9 @@
 import React, { Component } from 'react'
+import Home from './components/Home'
+import Clubs from './components/Clubs'
+import Profile from './components/Profile'
+import Search from './components/Search'
+import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom' 
 import './App.css'
 import firebase from 'firebase'
 
@@ -26,6 +31,24 @@ class App extends Component {
 
   render() {
     return (
+      <>
+      <Router>
+        <div>
+          <nav>
+            <Link to='/home'>Home</Link><br/>
+            <Link to='/search'>Search</Link><br/>
+            <Link to='/clubs'>Clubs</Link><br/>
+            <Link to='/profile'>Profile</Link><br/>
+          </nav>
+            <Switch>
+              <Route path='/home' component={Home} />
+              <Route path='/search' component={Search} />
+              <Route path='/clubs' component={Clubs} />
+              <Route path='/profile' component={Profile} />
+            </Switch>
+        </div>
+      </Router>
+
       <div>
         <div style={{textAlign: 'center'}}>
           <div>Email</div>
@@ -45,7 +68,7 @@ class App extends Component {
           </div>
         </div>
       </div>
-
+      </>
     )
   }
 }

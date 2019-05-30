@@ -1,1 +1,0 @@
-CREATE DATABASE bookedup_db;

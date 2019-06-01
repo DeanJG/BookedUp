@@ -8,9 +8,12 @@ module.exports = (sequelize, Sequelize) => {
         len: [5, 30]
       },
       book: {
-        type: Sequelize.STRING(300),
-        notNull: true,
-        isNumeric: true,
+        type: Sequelize.STRING,
+        notNull: true
+      },
+      users: {
+        type: Sequelize.STRING,
+        notNull: true
       }  
     },
       {

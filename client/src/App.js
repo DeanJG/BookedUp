@@ -37,7 +37,8 @@ class App extends Component {
   }
   getBooks = () => {
     console.log('hi nina')
-    fetch('http://localhost:4000/books')
+    //axios.get('/books)
+    fetch('/books')
       .then(r => r.json())
       .then(books => console.log(books))
       .catch(e => console.log(e))

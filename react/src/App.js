@@ -40,17 +40,17 @@ const uiConfig = {
 //     isSignedIn: false
 //   }
 
-  getUsers = _ => {
-    db.collection(`Users`).get()
-    .then(snap => {
-      let tempUsers = []
-      snap.forEach(doc => {
-        tempUsers.push(doc.data())
-      })
-      this.setState({ Users: tempUsers })
-    })
+//   getUsers = _ => {
+//     db.collection(`Users`).get()
+//     .then(snap => {
+//       let tempUsers = []
+//       snap.forEach(doc => {
+//         tempUsers.push(doc.data())
+//       })
+//       this.setState({ Users: tempUsers })
+//     })
 
-  }
+//   }
 
 
 class App extends Component {
@@ -65,20 +65,6 @@ class App extends Component {
   render() {
     return (
       <>
-      <Router>
-        <div>
-          <nav>
-            <Navbar />
-          </nav>
-            <Switch>
-              <Route path='/home' component={Home} />
-              <Route path='/search' component={Search} />
-              <Route path='/clubs' component={Clubs} />
-              <Route path='/profile' component={Profile} />
-            </Switch>
-        </div>
-      </Router>
-
       <div>
         <div style={{textAlign: 'center'}}>
           <div>Email</div>
@@ -98,6 +84,21 @@ class App extends Component {
           </div>
         </div>
       </div>
+
+      
+      <Router>
+        <div>
+          <nav>
+            <Navbar />
+          </nav>
+            <Switch>
+              <Route path='/home' component={Home} />
+              <Route path='/search' component={Search} />
+              <Route path='/clubs' component={Clubs} />
+              <Route path='/profile' component={Profile} />
+            </Switch>
+        </div>
+      </Router>
       </>
     )
   }

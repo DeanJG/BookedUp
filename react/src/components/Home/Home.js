@@ -1,11 +1,22 @@
 import React, { Component } from 'react'
+import TopNavi from './TopNavi'
+import Cards from './Cards'
 
 export default class Home extends Component {
     render () {
         return (
-            <>
-            <h1>This is the Home Page YUUUH</h1>
-            </>
+            <div>
+                <TopNavi />
+                <Cards />
+                <Cards />
+                <Cards />
+                <Cards />
+                <Cards />
+                <Cards />
+
+
+
+                </div>
         )
     }
 }

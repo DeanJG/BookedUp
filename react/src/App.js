@@ -20,6 +20,38 @@ import firebase from 'firebase'
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
 
+  // Configure FirebaseUI.
+const uiConfig = {
+  // Popup signin flow rather than redirect flow.
+  signInFlow: 'popup',
+  // Redirect to /signedIn after sign in is successful. Alternatively you can provide a callbacks.signInSuccess function.
+  signInSuccessUrl: '/components/login.js',
+  // We will display Google and Facebook as auth providers.
+  signInOptions: [
+    firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+  ]
+}
+
+// class App extends Component {
+//   state = {
+//     Users: [],
+//     item: ``,
+//     isSignedIn: false
+//   }
+
+  getUsers = _ => {
+    db.collection(`Users`).get()
+    .then(snap => {
+      let tempUsers = []
+      snap.forEach(doc => {
+        tempUsers.push(doc.data())
+      })
+      this.setState({ Users: tempUsers })
+    })
+
+  }
+
+
 class App extends Component {
   getBooks = () => {
     console.log('hi nina')

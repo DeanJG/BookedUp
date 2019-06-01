@@ -7,6 +7,7 @@ import Navbar from './components/Navbar'
 import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom' 
 import './App.css'
 import firebase from 'firebase'
+import Login from './components/Login'
 
   // Your web app's Firebase configuration
   const firebaseConfig = {
@@ -77,8 +78,12 @@ class App extends Component {
               <Route path='/profile' component={Profile} />
             </Switch>
         </div>
+        <div>
+          {/* <Route exact path='/' component={() } */}
+          <Route exact path='/login' component={() => <Login uiConfig= {uiConfig}/>}/>
+        </div>
       </Router>
-
+     
       <div>
         <div style={{textAlign: 'center'}}>
           <div>Email</div>

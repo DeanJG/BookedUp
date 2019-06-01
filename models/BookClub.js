@@ -7,7 +7,7 @@ module.exports = (sequelize, Sequelize) => {
         isAlpha: true,
         len: [5, 30]
       },
-      books: {
+      book: {
         type: Sequelize.STRING(300),
         notNull: true,
         isNumeric: true,
@@ -18,6 +18,6 @@ module.exports = (sequelize, Sequelize) => {
         modelName: 'bookClub'
       }
     )
-  
+
     return BookClub
   }

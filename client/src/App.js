@@ -8,6 +8,7 @@ import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom'
 import './App.css'
 import firebase from 'firebase'
 
+
   // Your web app's Firebase configuration
   const firebaseConfig = {
     apiKey: "AIzaSyC9NWKKTfx1jpU4V3uLb9n1GEs5lhUC0rY",
@@ -40,23 +41,23 @@ const uiConfig = {
 //     isSignedIn: false
 //   }
 
-  getUsers = _ => {
-    db.collection(`Users`).get()
-    .then(snap => {
-      let tempUsers = []
-      snap.forEach(doc => {
-        tempUsers.push(doc.data())
-      })
-      this.setState({ Users: tempUsers })
-    })
+  // getUsers = _ => {
+  //   db.collection(`Users`).get()
+  //   .then(snap => {
+  //     let tempUsers = []
+  //     snap.forEach(doc => {
+  //       tempUsers.push(doc.data())
+  //     })
+  //     this.setState({ Users: tempUsers })
+  //   })
 
-  }
-
+  // }
 
 class App extends Component {
   getBooks = () => {
     console.log('hi nina')
-    fetch('http://localhost:4000/books')
+    //axios.get('/books)
+    fetch('/books')
       .then(r => r.json())
       .then(books => console.log(books))
         .catch(e => console.log(e))
@@ -67,9 +68,7 @@ class App extends Component {
       <>
       <Router>
         <div>
-          <nav>
             <Navbar />
-          </nav>
             <Switch>
               <Route path='/home' component={Home} />
               <Route path='/search' component={Search} />

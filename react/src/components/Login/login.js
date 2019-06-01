@@ -9,8 +9,9 @@ class Login extends Component {
     const { IsSignedIn, uiConfig } = this.props
     return (
       <div className="Login">
-        {IsSignedIn ?
-          <div>You are signed In!</div>
+        {IsSignedIn ? (
+          <button color='secondary' onClick={() => firebase.auth().signOut()}>Sign Out...</button>
+        )
           :
           <StyledFirebaseAuth
             uiConfig={uiConfig}

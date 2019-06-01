@@ -3,6 +3,7 @@ import Home from './components/Home'
 import Clubs from './components/Clubs'
 import Profile from './components/Profile'
 import Search from './components/Search'
+import Navbar from './components/Navbar'
 import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom' 
 import './App.css'
 import firebase from 'firebase'
@@ -21,19 +22,36 @@ import Login from './components/Login'
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
 
-// Configure FirebaseUI.
+  // Configure FirebaseUI.
 const uiConfig = {
   // Popup signin flow rather than redirect flow.
   signInFlow: 'popup',
   // Redirect to /signedIn after sign in is successful. Alternatively you can provide a callbacks.signInSuccess function.
-  signInSuccessUrl: '/signedIn',
+  signInSuccessUrl: '/components/login.js',
   // We will display Google and Facebook as auth providers.
   signInOptions: [
     firebase.auth.GoogleAuthProvider.PROVIDER_ID,
-    firebase.auth.FacebookAuthProvider.PROVIDER_ID
   ]
-};
+}
 
+// class App extends Component {
+//   state = {
+//     Users: [],
+//     item: ``,
+//     isSignedIn: false
+//   }
+
+  getUsers = _ => {
+    db.collection(`Users`).get()
+    .then(snap => {
+      let tempUsers = []
+      snap.forEach(doc => {
+        tempUsers.push(doc.data())
+      })
+      this.setState({ Users: tempUsers })
+    })
+
+  }
 
 
 class App extends Component {
@@ -51,10 +69,7 @@ class App extends Component {
       <Router>
         <div>
           <nav>
-            <Link to='/home'>Home</Link><br/>
-            <Link to='/search'>Search</Link><br/>
-            <Link to='/clubs'>Clubs</Link><br/>
-            <Link to='/profile'>Profile</Link><br/>
+            <Navbar />
           </nav>
             <Switch>
               <Route path='/home' component={Home} />

@@ -30,6 +30,7 @@ const uiConfig = {
   ]
 }
 
+
 class App extends Component {
   state = {
     isSignedIn: false
@@ -57,8 +58,6 @@ class App extends Component {
     this.unregisterAuthObserver();
   }
 
-
-
     render() { 
       const { isSignedIn } = this.state
       return (
@@ -66,7 +65,9 @@ class App extends Component {
           <Router>
             <div>
               <nav>
-                <Navbar />
+                <Navbar 
+                />
+               
               </nav>
               <Switch>
                 <Route path='/home' component={Home} />
@@ -79,7 +80,6 @@ class App extends Component {
               <Route exact path='/login' component={() => <Login uiConfig={uiConfig} isSignedIn={isSignedIn} />} />
             </div>
           </Router>
-
 
           <div>
             <div style={{ textAlign: 'center' }}>
@@ -100,7 +100,6 @@ class App extends Component {
               </div>
             </div>
           </div>
-
         </>
       )
     }

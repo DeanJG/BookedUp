@@ -3,7 +3,6 @@ import Home from './components/Home'
 import Clubs from './components/Clubs'
 import Profile from './components/Profile'
 import Search from './components/Search'
-import Navbar from './components/Navbar'
 import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom' 
 import './App.css'
 import firebase from 'firebase'
@@ -68,7 +67,10 @@ class App extends Component {
       <Router>
         <div>
           <nav>
-            <Navbar />
+            <Link to='/home'>Home</Link><br/>
+            <Link to='/search'>Search</Link><br/>
+            <Link to='/clubs'>Clubs</Link><br/>
+            <Link to='/profile'>Profile</Link><br/>
           </nav>
             <Switch>
               <Route path='/home' component={Home} />

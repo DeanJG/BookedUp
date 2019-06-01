@@ -16,8 +16,8 @@ module.exports = (sequelize, Sequelize) => {
         isAlpha: true
       },
       year_published: Sequelize.INTEGER,
-      rating: Sequelize.FLOAT(1,4),
-      synopsis: Sequelize.STRING(500),
+      rating: Sequelize.FLOAT(4,1),
+      synopsis: Sequelize.STRING(750),
       cover: {
         type: Sequelize.STRING,
         notNull: true
@@ -28,6 +28,6 @@ module.exports = (sequelize, Sequelize) => {
         modelName: 'books'
       }
     )
-  
+
     return Book
   }

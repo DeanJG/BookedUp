@@ -6,6 +6,7 @@ import Search from './components/Search'
 import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom' 
 import './App.css'
 import firebase from 'firebase'
+import Login from './components/Login'
 
   // Your web app's Firebase configuration
   const firebaseConfig = {
@@ -19,6 +20,21 @@ import firebase from 'firebase'
   };
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
+
+// Configure FirebaseUI.
+const uiConfig = {
+  // Popup signin flow rather than redirect flow.
+  signInFlow: 'popup',
+  // Redirect to /signedIn after sign in is successful. Alternatively you can provide a callbacks.signInSuccess function.
+  signInSuccessUrl: '/signedIn',
+  // We will display Google and Facebook as auth providers.
+  signInOptions: [
+    firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+    firebase.auth.FacebookAuthProvider.PROVIDER_ID
+  ]
+};
+
+
 
 class App extends Component {
   getBooks = () => {
@@ -47,8 +63,12 @@ class App extends Component {
               <Route path='/profile' component={Profile} />
             </Switch>
         </div>
+        <div>
+          {/* <Route exact path='/' component={() } */}
+          <Route exact path='/login' component={() => <Login uiConfig= {uiConfig}/>}/>
+        </div>
       </Router>
-
+     
       <div>
         <div style={{textAlign: 'center'}}>
           <div>Email</div>

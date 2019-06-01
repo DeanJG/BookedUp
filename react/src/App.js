@@ -30,7 +30,6 @@ const uiConfig = {
   ]
 }
 
-
 class App extends Component {
   state = {
     isSignedIn: false
@@ -81,6 +80,7 @@ class App extends Component {
             </div>
           </Router>
 
+
           <div>
             <div style={{ textAlign: 'center' }}>
               <div>Email</div>
@@ -100,6 +100,7 @@ class App extends Component {
               </div>
             </div>
           </div>
+
         </>
       )
     }

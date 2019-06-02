@@ -17,7 +17,7 @@ module.exports = (sequelize, Sequelize) => {
       },
       year_published: Sequelize.INTEGER,
       rating: Sequelize.FLOAT(4,1),
-      synopsis: Sequelize.STRING(1000),
+      synopsis: Sequelize.STRING(1250),
       cover: {
         type: Sequelize.STRING,
         notNull: true

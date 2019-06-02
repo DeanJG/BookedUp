@@ -15,12 +15,12 @@ module.exports = (sequelize, Sequelize) => {
         len: [6, 50],
         isEmail: true
       },
-      friends: {
+      friendIds: {
         type: Sequelize.STRING(300),
         notNull: true,
         isNumeric: true,
       },
-      books: {
+      bookIds: {
         type: Sequelize.STRING(300),
         notNull: true,
         isNumeric: true,

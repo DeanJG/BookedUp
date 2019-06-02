@@ -7,13 +7,14 @@ module.exports = (sequelize, Sequelize) => {
         isAlpha: true,
         len: [5, 30]
       },
-      book: {
+      bookId: {
         type: Sequelize.STRING,
         notNull: true
       },
-      users: {
+      userIds: {
         type: Sequelize.STRING,
-        notNull: true
+        notNull: true,
+        len: [1, 29]
       }  
     },
       {

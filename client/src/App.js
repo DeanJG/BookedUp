@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import Home from './components/Home'
 import Clubs from './components/Clubs'
 import Profile from './components/Profile'
-import Search from './components/Search'
+import Search from './components/Search/SearchPageBookDescription'
 import Navbar from './components/Navbar'
 import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom'
 import './App.css'
@@ -82,6 +82,7 @@ class App extends Component {
             </div>
           </Router>
 
+
           {/* <div>
             <div style={{ textAlign: 'center' }}>
               <div>Email</div>
@@ -101,6 +102,7 @@ class App extends Component {
               </div>
             </div>
           </div> */}
+
         </>
       )
     }

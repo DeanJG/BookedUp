@@ -5,15 +5,15 @@ import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import MenuIcon from '@material-ui/icons/MoreVert';
-import Dropdown from './Dropdown'
-// import Logo from '../../../../../../assets/logo.png'
 
 const useStyles = makeStyles(theme => ({
   root: {
   },
   appBar: {
+    display: 'block',
+    position: 'fixed',
     top: 0,
-    bottom: 'auto',
+    width: '100%',
   },
   toolBar: {
     backgroundColor: '#5B4FED !important',
@@ -33,12 +33,12 @@ function TopNavi() {
   const classes = useStyles();
   return (
     <div className={classes.root}>
-      <AppBar className={classes.appBar} position="fixed">
+      <AppBar className={classes.appBar} position="sticky">
         <Toolbar className={classes.toolBar}>
           <IconButton className={classes.logo}>
           </IconButton>
           <Typography className={classes.title} variant="h6" noWrap>
-            Booked Up
+            Search
           </Typography>
           <IconButton
             edge="start"
@@ -46,8 +46,7 @@ function TopNavi() {
             color="inherit"
             aria-label="Open drawer"
           >
-            <Dropdown />
-            {/* <MenuIcon />      */}
+            <MenuIcon />     
           </IconButton>
        </Toolbar>
       </AppBar>

@@ -31,20 +31,23 @@ function LabelBottomNavigation() {
   }
 
   return (
-    <BottomNavigation value={value} onChange={handleChange} className={classes.root}>
-    <Link className={classes.link} to='/home'>
-      <BottomNavigationAction className={classes.icon} label="Feed" value="feed" icon={<Icon>public</Icon>} />
-    </Link>
-    <Link className={classes.link} to='/search'>
-      <BottomNavigationAction className={classes.icon} label="Search" value="search" icon={<Icon>search</Icon>} />
-    </Link>
-    <Link className={classes.link} to='/clubs'>
-      <BottomNavigationAction className={classes.icon} label="Book Clubs" value="bookclub" icon={<Icon>import_contacts</Icon>} />
-    </Link>
-    <Link className={classes.link} to='/profile'>
-      <BottomNavigationAction className={classes.icon} label="Profile" value="profile" icon={<Icon>face</Icon>} />
-    </Link>
-    </BottomNavigation>
+
+    <div>
+      <BottomNavigation value={value} onChange={handleChange} className={classes.root}>
+      <Link className={classes.link} to='/home'>
+        <BottomNavigationAction className={classes.icon} label="Feed" value="feed" icon={<Icon>public</Icon>} />
+      </Link>
+      <Link className={classes.link} to='/search'>
+        <BottomNavigationAction className={classes.icon} label="Search" value="search" icon={<Icon>search</Icon>} />
+      </Link>
+      <Link className={classes.link} to='/clubs'>
+        <BottomNavigationAction className={classes.icon} label="Book Clubs" value="bookclub" icon={<Icon>import_contacts</Icon>} />
+      </Link>
+      <Link className={classes.link} to='/profile'>
+        <BottomNavigationAction className={classes.icon} label="Profile" value="profile" icon={<Icon>face</Icon>} />
+      </Link>
+      </BottomNavigation>
+    </div>
   )
 }
 

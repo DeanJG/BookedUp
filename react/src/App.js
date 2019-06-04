@@ -81,7 +81,7 @@ class App extends Component {
           </Router>
 
 
-          <div>
+          {/* <div>
             <div style={{ textAlign: 'center' }}>
               <div>Email</div>
               <input id="Email" placeholder="Please Enter Email." type="text"></input>
@@ -99,7 +99,7 @@ class App extends Component {
                 <button style={{ margin: '12px' }} onClick={this.getBooks}>Books</button>
               </div>
             </div>
-          </div>
+          </div> */}
 
         </>
       )

@@ -6,6 +6,8 @@ import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import ButtonBase from '@material-ui/core/ButtonBase';
 import Button from '@material-ui/core/Button';
+import AddIcon from '@material-ui/icons/KeyboardArrowRight';
+
 
 
 const styles = theme => ({
@@ -14,16 +16,15 @@ const styles = theme => ({
     margin: '0px 20px 10px 20px',
   },
   paper: {
-    padding: '20px',
-    margin: 'auto',
+    margin: '20px auto 20px auto',
     maxWidth: 500,
   },
   image: {
     width: 'auto',
-    height: 150,
+    height: 100,
+    marginLeft: 10,
   },
   img: {
-    margin: '0px 20px 20px 20px',
     display: 'block',
     maxWidth: '100%',
     maxHeight: '100%',
@@ -35,11 +36,14 @@ const styles = theme => ({
   flexWrap: 'nowrap',
   },    
    Btn: {
-    color: 'white', 
-    backgroundColor: '#5B4FED',
-    width: '100%',
-    borderRadius: '20px',   
-}
+    color: '#5B4FED', 
+    backgroundColor: 'white',
+    padding: '0px',
+    border: 'none',
+    marginTop: '40px'
+},
+
+
 });
 
 function ComplexGrid(props) {
@@ -53,29 +57,21 @@ function ComplexGrid(props) {
               <img className={classes.img} alt="complex" src="http://i67.tinypic.com/wk4bh2.png" />
             </ButtonBase>
           </Grid>
-          <Grid item xs={12} sm container>
-            <Grid item xs container direction="column" spacing={2}>
-              <Grid item xs>
-                <Typography gutterBottom variant="subtitle1">
-                  Club Spotlight
-                </Typography>
-                <Typography className={classes.BookTitle} variant="h6" gutterBottom>
-                  BOOK TITLE HERE
+             <Grid item xs>
+               <Typography className={classes.BookTitle} variant="h6" gutterBottom>
+                  Book Club Name Here
                 </Typography>
                 <Typography variant="body2" color="textSecondary">
                   Description Here. Beyonce is the best queeen ever. Read this book if you're a beyonce fan like justin.
-                </Typography>
-              </Grid>
-              <Grid item>
-              <Button className={classes.Btn}>
-                Join
-            </Button>
-              </Grid>
+                </Typography>              
             </Grid>
-
-          </Grid>
+        <Grid item className={classes.btnGrid}>
+            <button className={classes.Btn}>
+               <AddIcon />
+             </button>
         </Grid>
-      </Paper>
+         </Grid>
+       </Paper>
     </div>
   );
 }

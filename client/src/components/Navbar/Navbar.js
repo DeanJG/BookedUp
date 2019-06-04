@@ -31,6 +31,8 @@ function LabelBottomNavigation() {
   }
 
   return (
+
+    <div></div>
     <BottomNavigation value={value} onChange={handleChange} className={classes.root}>
     <Link className={classes.link} to='/home'>
       <BottomNavigationAction className={classes.icon} label="Feed" value="feed" icon={<Icon>public</Icon>} />
@@ -45,6 +47,7 @@ function LabelBottomNavigation() {
       <BottomNavigationAction className={classes.icon} label="Profile" value="profile" icon={<Icon>face</Icon>} />
     </Link>
     </BottomNavigation>
+  
   )
 }
 

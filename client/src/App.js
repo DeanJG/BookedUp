@@ -30,13 +30,15 @@ const uiConfig = {
   ]
 }
 
+
 class App extends Component {
   state = {
     isSignedIn: false
   }
   getBooks = () => {
     console.log('hi nina')
-    fetch('http://localhost:4000/books')
+    //axios.get('/books)
+    fetch('/books')
       .then(r => r.json())
       .then(books => console.log(books))
       .catch(e => console.log(e))
@@ -57,8 +59,6 @@ class App extends Component {
     this.unregisterAuthObserver();
   }
 
-
-
     render() { 
       const { isSignedIn } = this.state
       return (
@@ -66,7 +66,9 @@ class App extends Component {
           <Router>
             <div>
               <nav>
-                <Navbar />
+                <Navbar 
+                />
+               
               </nav>
               <Switch>
                 <Route path='/home' component={Home} />
@@ -80,8 +82,7 @@ class App extends Component {
             </div>
           </Router>
 
-
-          <div>
+          {/* <div>
             <div style={{ textAlign: 'center' }}>
               <div>Email</div>
               <input id="Email" placeholder="Please Enter Email." type="text"></input>
@@ -99,8 +100,7 @@ class App extends Component {
                 <button style={{ margin: '12px' }} onClick={this.getBooks}>Books</button>
               </div>
             </div>
-          </div>
-
+          </div> */}
         </>
       )
     }

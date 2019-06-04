@@ -9,23 +9,22 @@ import MenuIcon from '@material-ui/icons/MoreVert';
 
 const useStyles = makeStyles(theme => ({
   root: {
-    flexGrow: 1,
+  },
+  appBar: {
+    top: 0,
+    bottom: 'auto',
   },
   toolBar: {
     backgroundColor: '#5B4FED !important',
 },
 
   menuButton: {
-    marginRight: theme.spacing(2),
+    margin: 'none',
   },
   title: {
     flexGrow: 1,
-    display: 'none',
-    [theme.breakpoints.up('sm')]: {
-      display: 'block',
-      textAlign: 'center',
-
-    },
+    display: 'block',
+    textAlign: 'center',
   },
 }));
 
@@ -33,7 +32,7 @@ function TopNavi() {
   const classes = useStyles();
   return (
     <div className={classes.root}>
-      <AppBar position="static">
+      <AppBar className={classes.appBar} position="fixed">
         <Toolbar className={classes.toolBar}>
           <IconButton className={classes.logo}>
           </IconButton>

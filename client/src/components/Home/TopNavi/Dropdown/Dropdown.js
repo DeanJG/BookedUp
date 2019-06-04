@@ -5,8 +5,8 @@ import MenuItem from '@material-ui/core/MenuItem';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 
 const options = [
-  'Home',
   'Sign Out',
+  'Theme',
 ];
 
 const ITEM_HEIGHT = 48;

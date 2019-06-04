@@ -6,7 +6,6 @@ CREATE DATABASE bookedup_db;
 
 USE bookedup_db;
 
--- Unused for now, confused on how multiple users can be assigned to one club
--- every source i could find indicates the need for a table per club despite Quinton's advice
-INSERT INTO bookclubs (`name`, book, userId)
-VALUES ('', , ), ;
+INSERT INTO bookclubs (`name`, bookId, userIds, createdAt, updatedAt, userId)
+VALUES ("We're Wizards, Harry!", '1', '1,2,3,4,8', '2019-06-02 11:12:10', '2019-06-02 11:12:10', 8), 
+("Maybe This Will End Better", '5', '1,2,3,4,7,9', '2019-06-02 11:12:10', '2019-06-02 11:12:10', 1);

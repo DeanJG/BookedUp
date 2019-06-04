@@ -5,6 +5,7 @@ import BottomNavigationAction from '@material-ui/core/BottomNavigationAction'
 import { Link } from 'react-router-dom' 
 import Icon from '@material-ui/core/Icon'
 
+
 const useStyles = makeStyles({
   root: {
     width: 500,
@@ -22,6 +23,8 @@ const useStyles = makeStyles({
   },
 })
 
+
+
 function LabelBottomNavigation() {
   const classes = useStyles()
   const [value, setValue] = React.useState('recents');
@@ -31,6 +34,7 @@ function LabelBottomNavigation() {
   }
 
   return (
+    <>
     <BottomNavigation value={value} onChange={handleChange} className={classes.root}>
     <Link className={classes.link} to='/home'>
       <BottomNavigationAction className={classes.icon} label="Feed" value="feed" icon={<Icon>public</Icon>} />
@@ -45,6 +49,7 @@ function LabelBottomNavigation() {
       <BottomNavigationAction className={classes.icon} label="Profile" value="profile" icon={<Icon>face</Icon>} />
     </Link>
     </BottomNavigation>
+    </>
   )
 }
 

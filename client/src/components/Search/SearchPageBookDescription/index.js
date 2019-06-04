@@ -1,0 +1,2 @@
+import SearchPageBookDescription from './SearchPageBookDescription'
+export default SearchPageBookDescription

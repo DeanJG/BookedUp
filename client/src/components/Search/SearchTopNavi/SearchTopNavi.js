@@ -5,34 +5,36 @@ import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import MenuIcon from '@material-ui/icons/MoreVert';
+// import Logo from '../../../../../../assets/logo.png'
 
 const useStyles = makeStyles(theme => ({
   root: {
-    flexGrow: 1,
+  },
+  appBar: {
+    display: 'block',
+    position: 'fixed',
+    top: 0,
+    width: '100%',
   },
   toolBar: {
     backgroundColor: '#5B4FED !important',
 },
 
   menuButton: {
-    marginRight: theme.spacing(2),
+    margin: 'none',
   },
   title: {
     flexGrow: 1,
-    display: 'none',
-    [theme.breakpoints.up('sm')]: {
-      display: 'block',
-      textAlign: 'center',
-
-    },
+    display: 'block',
+    textAlign: 'center',
   },
 }));
 
-function SearchTopNavi() {
+function TopNavi() {
   const classes = useStyles();
   return (
     <div className={classes.root}>
-      <AppBar position="static">
+      <AppBar className={classes.appBar} position="sticky">
         <Toolbar className={classes.toolBar}>
           <IconButton className={classes.logo}>
           </IconButton>
@@ -54,4 +56,4 @@ function SearchTopNavi() {
 }
 
 
-export default SearchTopNavi;
+export default TopNavi;

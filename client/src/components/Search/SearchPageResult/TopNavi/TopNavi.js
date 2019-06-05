@@ -30,7 +30,7 @@ const useStyles = makeStyles(theme => ({
     textAlign: 'center',
   },
   logo: {
-    color: '#5B4FED',
+    color: 'white',
   }
 }));
 

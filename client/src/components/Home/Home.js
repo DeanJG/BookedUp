@@ -7,7 +7,7 @@ import NavBar from '../Navbar'
 export default class Home extends Component {
     render () {
         return (
-            <div style={{marginTop: '55px', marginBottom: '55px'}}>
+            <div style={{marginTop: '85px', marginBottom: '85px'}}>
                 <TopNavi />
                 <Cards />
                 <Cards />

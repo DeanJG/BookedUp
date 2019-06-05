@@ -31,12 +31,18 @@ const useStyles = makeStyles({
     textAlign: 'center',
 },  
   BookBio: {
-    margin: '20px',
+    margin: '20px 20px 0px 20px',
   },
   fabIcon: {
     boxShadow: 'none',
     margin: '0px 10px 0px 10px',
 
+  },
+  button: {
+    backgroundColor: '#5B4FED',
+    color: 'white',
+    textAlign: 'center',
+    marginTop: '20px',
   },
 });
 
@@ -59,12 +65,14 @@ function MediaCard() {
         <Typography className={classes.BookTitle} variant="h6" gutterBottom>
         BOOK TITLE HERE 
         <Fab size="small" color="secondary" aria-label="Add" className={classes.fabIcon}>
-          <AddIcon />
+          <AddIcon /><br></br>
         </Fab>
+        <Button variant="contained" className={classes.button}>
+        Create New Book Club
+      </Button>
+       
         </Typography>
-       
-       
-       
+    
         <Typography className={classes.BookBio} variant="body2" color="textSecondary">
          Description Here. Beyonce is the best queeen ever. Read this book if you're a beyonce fan like justin.
          Description Here. Beyonce is the best queeen ever. Read this book if you're a beyonce fan like justin.

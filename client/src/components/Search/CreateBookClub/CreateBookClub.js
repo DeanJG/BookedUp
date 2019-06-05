@@ -1,25 +1,24 @@
 import React, { Component } from 'react'
 import TopNavi from './TopNavi'
-import SearchBar from './SearchBar'
-import Spotlight from './Spotlight'
-import Navbar from '../../Navbar'
+import Card from './Card'
+import Input from './input'
+
+
+
 
 
 
 export default class Search extends Component {
     render () {
         return (
-
+            // Search Results
             <div style={{marginTop: '65px', marginBottom: '85px'}}>
             <TopNavi />
-            <SearchBar />
-            <Spotlight />
-            <Navbar />
+            <Card />
 
             </div>
+
 
         )
     }
 }
-
-

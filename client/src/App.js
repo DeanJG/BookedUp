@@ -47,6 +47,23 @@ class App extends Component {
       .then(books => console.log(books))
       .catch(e => console.log(e))
   }
+  getUsers = () => {
+    console.log('getting users')
+    //axios.get('/users)
+    fetch('/users')
+      .then(r => r.json())
+      .then(users => console.log(users))
+      .catch(e => console.log(e))
+  }
+  getFriends = () => {
+    console.log('getting friends..')
+    fetch(`/users/1/friends`)
+      .then(r => r.json())
+      .then(friends => friends.friendList.forEach(friend => {
+        console.log(friend.name)
+      }))
+      .catch(e => console.log(e))
+  }
 
   componentWillMount() {
     firebase.auth().onAuthStateChanged(firebase.auth().onAuthStateChanged(
@@ -107,13 +124,15 @@ class App extends Component {
                   <div>Password</div>
                   <input id="password" placeholder="Please Enter Password." type="text"></input>
                 </div>
-              </div>
+              </div> */}
               <div style={{ textAlign: 'center' }}>
                 <button style={{ margin: '12px' }} onClick={this.login}>Login</button>
                 <button style={{ margin: '12px' }} onClick={this.Signup}>Signup</button>
                 <button style={{ margin: '12px' }} onClick={this.getBooks}>Books</button>
+                <button style={{ margin: '12px' }} onClick={this.getUsers}>Users</button>
+                <button style={{ margin: '12px' }} onClick={this.getFriends}>Friends</button>
               </div>
-            </div>
+            {/* </div>
           </div> */}
 
         </>

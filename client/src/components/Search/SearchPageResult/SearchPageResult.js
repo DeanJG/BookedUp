@@ -15,16 +15,11 @@ export default class Search extends Component {
             <div style={{marginTop: '65px', marginBottom: '85px'}}>
             <TopNavi />
             <SearchBar />
-            <p style={{margin: '20px'}}><b style={{color: '#5B4FED'}}>Book(s)</b> Matching For "   "</p>
-           <BookSearchResult />
+            <p style={{margin: '20px'}}><b style={{color: '#5B4FED'}}>Book(s)</b> matching "50 Shades of Grey"</p>
            <BookSearchResult />
            <br />
            <hr />
-           <p style={{margin: '20px'}}><b style={{color: '#5B4FED'}}>Club(s)</b> Matching For "   "</p>
-            <ClubSearch />
-            <ClubSearch />
-            <ClubSearch />
-            <ClubSearch />
+           <p style={{margin: '20px'}}><b style={{color: '#5B4FED'}}>Club(s)</b> reading "50 Shades of Grey"</p>
             <ClubSearch />
 
             <Navbar />

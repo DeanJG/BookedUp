@@ -5,8 +5,7 @@ import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Avatar from '@material-ui/core/Avatar';
 import Typography from '@material-ui/core/Typography';
-import Katie from '../../../../Assets/Katie.png'
-
+import Host from '../../../../Assets/Justin.png'
 
 const styles = theme => ({
   root: {
@@ -16,37 +15,26 @@ const styles = theme => ({
   },
   paper: {
     maxWidth: 400,
-    margin: `${theme.spacing(1)}px auto`,
-    padding: theme.spacing(2),
-  },
-  name: {
-    color: '#5B4FED',
+    padding: 10,
+    margin: '20px 0px 20px 0px',
 
+  },
+  header: {
+    color: '#5B4FED',
   }
 });
-
-const message = `This book is so saucey. I love it! Highly recommend.`;
-
-
 function AutoGridNoWrap(props) {
   const { classes } = props;
 
   return (
     <div className={classes.root}>
+      <Typography className={classes.header}><b>Host</b></Typography>
+
       <Paper className={classes.paper}>
-        <Grid container wrap="nowrap" spacing={2}>
-          <Grid item>
-            <Avatar>
-            <img alt="Katie" src={Katie} />
+         <Avatar>
+         <img alt="Remy Sharp" src={Host} />
 
-            </Avatar>
-          </Grid>
-          <Grid item xs>
-          <Typography className={classes.name}><b>Katie</b></Typography>
-
-            <Typography>{message}</Typography>
-          </Grid>
-        </Grid>
+         </Avatar>
       </Paper>
     </div>
   );

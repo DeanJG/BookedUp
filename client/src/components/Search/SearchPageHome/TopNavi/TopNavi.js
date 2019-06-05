@@ -14,7 +14,9 @@ const useStyles = makeStyles(theme => ({
   appBar: {
     top: 0,
     bottom: 'auto',
-    margin: '0px'
+    margin: '0px',
+    boxShadow: 'none',
+
   },
   toolBar: {
     backgroundColor: '#5B4FED !important',
@@ -30,7 +32,7 @@ const useStyles = makeStyles(theme => ({
     textAlign: 'center',
   },
   logo: {
-    color: 'white',
+    color: '#5B4FED',
   }
 }));
 

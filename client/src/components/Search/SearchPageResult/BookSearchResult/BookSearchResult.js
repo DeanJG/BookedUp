@@ -7,6 +7,7 @@ import Typography from '@material-ui/core/Typography';
 import ButtonBase from '@material-ui/core/ButtonBase';
 import Button from '@material-ui/core/Button';
 import AddIcon from '@material-ui/icons/KeyboardArrowRight';
+import BookPic from '../../../../Assets/50Shades.png';
 
 
 
@@ -52,15 +53,15 @@ function ComplexGrid(props) {
         <Grid className={classes.gridStyle} container spacing={2}>
           <Grid item>
             <ButtonBase className={classes.image}>
-              <img className={classes.img} alt="complex" src="http://i67.tinypic.com/wk4bh2.png" />
+              <img className={classes.img} alt="complex" src={BookPic} />
             </ButtonBase>
           </Grid>
              <Grid item xs>
                <Typography className={classes.BookTitle} variant="h6" gutterBottom>
-                  Book Title Here
+                  50 Shade of Grey
                 </Typography>
                 <Typography variant="body2" color="textSecondary">
-                  Description Here. Beyonce is the best queeen ever. Read this book if you're a beyonce fan like justin.
+                  Fifty Shades of Grey is a 2011 erotic romance novel by British author E. L. James.
                 </Typography>              
             </Grid>
         <Grid item className={classes.btnGrid}>

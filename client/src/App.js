@@ -2,7 +2,11 @@ import React, { Component } from 'react'
 import Home from './components/Home'
 import Clubs from './components/Clubs'
 import Profile from './components/Profile'
-import Search from './components/Search/SearchPageBookDescription'
+import Search from './components/Search/SearchPageHome'
+import SearchResult from './components/Search/SearchPageResult'
+import SearchedBook from './components/Search/SearchPageBookDescription'
+import SearchedClub from './components/Search/SearchPageClubDescription'
+import CreateClub from './components/Search/CreateBookClub'
 import Navbar from './components/Navbar'
 import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom'
 import './App.css'
@@ -83,21 +87,30 @@ class App extends Component {
           <Router>
             <div>
               <nav>
-                <Navbar 
-                />
-               
-              </nav>
+              <Navbar />
+
+               </nav>
               <Switch>
                 <Route path='/home' component={Home} />
                 <Route path='/search' component={Search} />
                 <Route path='/clubs' component={Clubs} />
                 <Route path='/profile' component={Profile} />
+                <Route path='/searchresult' component={SearchResult} />
+                <Route path='/searchedbook' component={SearchedBook} />
+                <Route path='/searchedclub' component={SearchedClub} />
+                <Route path='/createClub' component={CreateClub} />
+
+
+
+
               </Switch>
             </div>
             <div>
               <Route exact path='/login' component={() => <Login uiConfig={uiConfig} isSignedIn={isSignedIn} />} />
+
             </div>
           </Router>
+  
 
 
           {/* <div>

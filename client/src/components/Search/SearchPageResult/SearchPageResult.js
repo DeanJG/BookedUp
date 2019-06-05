@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import SearchTopNavi from './SearchTopNavi'
+import TopNavi from './TopNavi'
 import SearchBar from './SearchBar'
 import BookSearchResult from './BookSearchResult'
 import Navbar from '../../Navbar'
@@ -12,19 +12,14 @@ export default class Search extends Component {
     render () {
         return (
             // Search Results
-            <div style={{marginTop: '55px', marginBottom: '55px'}}>
-            <SearchTopNavi />
+            <div style={{marginTop: '65px', marginBottom: '85px'}}>
+            <TopNavi />
             <SearchBar />
-            <p style={{margin: '20px'}}><b style={{color: '#5B4FED'}}>Book(s)</b> Matching For "   "</p>
-           <BookSearchResult />
+            <p style={{margin: '20px'}}><b style={{color: '#5B4FED'}}>Book(s)</b> matching "50 Shades of Grey"</p>
            <BookSearchResult />
            <br />
            <hr />
-           <p style={{margin: '20px'}}><b style={{color: '#5B4FED'}}>Club(s)</b> Matching For "   "</p>
-            <ClubSearch />
-            <ClubSearch />
-            <ClubSearch />
-            <ClubSearch />
+           <p style={{margin: '20px'}}><b style={{color: '#5B4FED'}}>Club(s)</b> reading "50 Shades of Grey"</p>
             <ClubSearch />
 
             <Navbar />

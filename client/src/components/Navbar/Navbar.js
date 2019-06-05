@@ -12,6 +12,7 @@ const useStyles = makeStyles({
     bottom: 0,
     top: 'auto',
     width: '-webkit-fill-available',
+    zIndex: 1,
   },
   icon: {
     color: '#5B4FED',

@@ -6,6 +6,7 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import MenuIcon from '@material-ui/icons/KeyboardBackspace';
 import Dropdown from './Dropdown'
+import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -32,7 +33,7 @@ const useStyles = makeStyles(theme => ({
     textAlign: 'center',
   },
   logo: {
-    color: '#5B4FED',
+    color: 'white',
   }
 }));
 
@@ -42,7 +43,7 @@ function TopNavi() {
     <div className={classes.root}>
       <AppBar className={classes.appBar} position="fixed">
         <Toolbar className={classes.toolBar}>
-          <IconButton className={classes.logo}>
+          <IconButton className={classes.logo} component={ Link } to='/search'>
           <MenuIcon />
           </IconButton>
           <Typography className={classes.title} variant="h6" noWrap>

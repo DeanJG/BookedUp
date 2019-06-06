@@ -64,7 +64,7 @@ class App extends Component {
               <Switch>
                 <Route exact path='/' component={() => {
                   if (isSignedIn) {
-                    return <Home uiConfig={uiConfig} isSignedIn={isSignedIn}/>
+                    return <Home />
                   } else {
                     return <Login uiConfig={uiConfig} isSignedIn={isSignedIn}/>
                   }

@@ -5,13 +5,13 @@ import Button from '@material-ui/core/Button'
 import Style from '../Style'
 import Logo from '../../Assets/Logo.png'
 
-
-
 class Login extends Component {
   render() {
     const { isSignedIn, uiConfig } = this.props
     return (
       <div>
+      <Style />
+      
       <div style={{marginTop: '80px', textAlign: 'center'}}>
        <img alt="logo" src={Logo}/>
 
@@ -26,7 +26,7 @@ class Login extends Component {
         }
       </div>
       </div>
-        {/* <Style /> */}
+       
 
       </div>
     )

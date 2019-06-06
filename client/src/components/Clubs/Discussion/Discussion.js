@@ -6,6 +6,8 @@ import Grid from '@material-ui/core/Grid';
 import Avatar from '@material-ui/core/Avatar';
 import Typography from '@material-ui/core/Typography';
 import Katie from '../../../Assets/Katie.png'
+import Quinton from '../../../Assets/Quinton.png'
+
 
 const styles = theme => ({
   root: {
@@ -14,8 +16,9 @@ const styles = theme => ({
   },
   paper: {
     maxWidth: 300,
-    margin: `${theme.spacing(1)}px auto`,
+    margin: '40px 0px 10px 0px',
     padding: theme.spacing(2),
+    
   },
   header: {
     paddingTop: 10,
@@ -30,8 +33,6 @@ function AutoGridNoWrap(props) {
 
   return (
     <div className={classes.root}>
-      <Typography className={classes.header}><b>Discussion Board</b></Typography>
-
       <Paper className={classes.paper}>
         <Grid container wrap="nowrap" spacing={2}>
           <Grid item>
@@ -42,7 +43,23 @@ function AutoGridNoWrap(props) {
             </Avatar>
           </Grid>
           <Grid item xs>
-            <Typography>Loving the book so far. Anyone else?</Typography>
+            <Typography>Loving the book so far. My favorite read this month.</Typography>
+          </Grid>
+        </Grid>    
+      </Paper>
+
+
+      <Paper className={classes.paper}>
+        <Grid container wrap="nowrap" spacing={2}>
+          <Grid item>
+            <Avatar>
+
+            <img alt="Quinton" src={Quinton} />
+
+            </Avatar>
+          </Grid>
+          <Grid item xs>
+            <Typography>Interesting read...</Typography>
           </Grid>
         </Grid>    
       </Paper>

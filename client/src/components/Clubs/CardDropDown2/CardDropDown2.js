@@ -6,7 +6,7 @@ import MuiExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
 import Typography from '@material-ui/core/Typography';
 import Host from '../Host';
 import Members from '../Members';
-import BookPic from '../../../Assets/beyoncebook.png';
+import BookPic from '../../../Assets/50Shades.png';
 import Button from '@material-ui/core/Button';
 import Discussion from '../Discussion';
 import Comment from '../Comment';
@@ -67,7 +67,7 @@ function CustomizedExpansionPanels() {
     <div>
       <ExpansionPanel square onChange={handleChange('panel1')}>
         <ExpansionPanelSummary  style={{flex: 'none', textAlign: 'center', padding: 'none'}} aria-controls="panel1d-content" id="panel1d-header">
-          <Typography>The Beehive Readers</Typography>
+          <Typography>The Bookworms</Typography>
         </ExpansionPanelSummary >
 
 
@@ -77,18 +77,18 @@ function CustomizedExpansionPanels() {
  
         <img alt="Remy Sharp" src={BookPic}/>
         <Typography style={{color: '#5B4FED'}} variant="h6" gutterBottom>
-        <b>Queen Bey</b>
+        <b>50 Shades of Grey</b>
          </Typography>
          <Typography style={{color: '#5B4FED'}}><b>Host</b></Typography>
          <Host />
          <Typography style={{color: '#5B4FED'}}><b>Members</b></Typography>
-         <Members />
+         <Typography><b>Currently No Members</b></Typography>
+
          <Typography style={{color: '#5B4FED'}}><b>Discussion Board</b></Typography>
          <Comment />
          <Button variant="contained" style={{backgroundColor: '#5B4FED', color: 'white', marginTop: '10px'}}>
          Post
          </Button>
-         <Discussion />
          <hr style={{margin: '30px 0px 30px 0px'}}></hr>
          <Button variant="contained" style={{backgroundColor: '#5B4FED', color: 'white', marginTop: '10px'}}>
          Leave BookClub

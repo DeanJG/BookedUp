@@ -1,11 +1,12 @@
 import React from 'react';
 import Toolbar from '@material-ui/core/Toolbar';
-import IconButton from '@material-ui/core/IconButton';
 import InputBase from '@material-ui/core/InputBase';
 import { fade } from '@material-ui/core/styles/colorManipulator';
 import { makeStyles } from '@material-ui/core/styles';
 import SearchIcon from '@material-ui/icons/Search';
 import { Link } from 'react-router-dom';
+import IconButton from '@material-ui/core/IconButton';
+
 
 
 
@@ -59,37 +60,26 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-function SearchAppBar(props) {
-  const classes = useStyles()
-  console.log(props)
-  const [title, setTitle] = React.useState('')
-  function updateTitle(e) {
-    setTitle(e.target.value)
-  }
-  console.log('here are props: ', props)
+function SearchAppBar() {
+  const classes = useStyles();
   return (
     <div className={classes.root}>
         <Toolbar>
           <div className={classes.search}>
             <div className={classes.searchIcon}>
-              <IconButton component={ Link } to='/searchedbook'>
-                {/* <div onClick={() => props.getBookInfo(title)}>
-                  <SearchIcon />
-                </div> */}
-              </IconButton>
+      
             </div>
             <InputBase
               placeholder="Search…"
-              id="title"
-              value={title}
               classes={{
                 root: classes.inputRoot,
                 input: classes.inputInput,
               }}
-              onChange={updateTitle}
             />
           </div>
-          <button onClick={() => props.getBookInfo(title)}>fdioafdoia</button>
+          <IconButton className={classes.logo} component={ Link } to='/searchresult'>
+          <SearchIcon />
+          </IconButton>
         </Toolbar>
     </div>
   );

@@ -6,8 +6,7 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
-import Fab from '@material-ui/core/Fab';
-import AddIcon from '@material-ui/icons/Favorite';
+import Dean from '../../../Assets/Dean.png';
 
 
 
@@ -16,22 +15,22 @@ const useStyles = makeStyles({
     width: 'auto',
     boxShadow: 'none',
     borderRadius: '0px !important',
+    margin: 'none',
+    paddingBottom: 'none',
   },
   media: {
     height: 180,
+    paddingBottom: 'none',
+    margin: 'none',
   },
   bigAvatar: {
     width: '100px',
     height: 'auto',
-    marginTop: '-70px',
-    border: '5px solid white'
+    marginTop: '-50px',
   },
   BookTitle: {
     color: '#5B4FED',
     textAlign: 'center',
-},  
-  BookBio: {
-    margin: '20px',
   },
   fabIcon: {
     boxShadow: 'none',
@@ -41,7 +40,7 @@ const useStyles = makeStyles({
 });
 
 function MediaCard() {
-  const classes = useStyles()
+  const classes = useStyles();
 
   return (
     <Card className={classes.card}>
@@ -51,22 +50,10 @@ function MediaCard() {
           title="hero"
         />
 
- <Grid container justify="center" alignItems="center">
-      <img alt="Remy Sharp" src="http://i67.tinypic.com/wk4bh2.png" className={classes.bigAvatar} />
+ <Grid container justify="center" alignItems="center" style={{margin: 'none', padding: 'none'}}>
+      
     </Grid>
 
-        <CardContent>
-        <Typography className={classes.BookTitle} variant="h6" gutterBottom>
-        BOOK TITLE HERE 
-        <Fab size="small" color="secondary" aria-label="Add" className={classes.fabIcon}>
-          <AddIcon />
-        </Fab>
-        </Typography>
-       
-       
-
-        </CardContent>
-      
     </Card>
   );
 }

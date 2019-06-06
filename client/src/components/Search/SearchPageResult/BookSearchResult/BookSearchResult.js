@@ -8,6 +8,8 @@ import ButtonBase from '@material-ui/core/ButtonBase';
 import Button from '@material-ui/core/Button';
 import AddIcon from '@material-ui/icons/KeyboardArrowRight';
 import BookPic from '../../../../Assets/50Shades.png';
+import { Link } from 'react-router-dom';
+import IconButton from '@material-ui/core/IconButton';
 
 
 
@@ -65,9 +67,11 @@ function ComplexGrid(props) {
                 </Typography>              
             </Grid>
         <Grid item className={classes.btnGrid}>
-            <button className={classes.Btn}>
-               <AddIcon />
-             </button>
+
+
+        <IconButton className={classes.Btn} component={ Link } to='/searchedbook'>
+        <AddIcon />
+        </IconButton> 
         </Grid>
          </Grid>
        </Paper>

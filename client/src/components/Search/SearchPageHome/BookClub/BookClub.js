@@ -5,7 +5,7 @@ import Grid from '@material-ui/core/Grid'
 // import Host from '../../../../Assets/host.png'
 import Paper from '@material-ui/core/Paper'
 import Typography from '@material-ui/core/Typography'
-import Hosting from '../../../Assets/Hosting.png'
+import BookClubs from '../../../../Assets/7.png'
 
 const useStyles = makeStyles({
   avatar: {
@@ -35,7 +35,7 @@ export default function LetterAvatars() {
 
   return (
     <div>
-    <Typography className={classes.header}><b>Hosting</b>
+    <Typography className={classes.header}><b>Current Book Clubs</b>
     </Typography> 
     <Paper className={classes.paperDiv}>
 
@@ -43,9 +43,9 @@ export default function LetterAvatars() {
     <Paper className={classes.paper}>
   
     <Grid container justify="center" alignItems="center">
-      <i style={{color: "white"}} class="material-icons">keyboard_arrow_left</i>
-      <img alt="favorites" src={Hosting} />
-      <i style={{color: "white"}} class="material-icons">keyboard_arrow_right</i>
+      <i class="material-icons">keyboard_arrow_left</i>
+      <img alt="favorites" src={BookClubs} />
+      <i class="material-icons">keyboard_arrow_right</i>
     </Grid>
     
 

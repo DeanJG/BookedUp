@@ -5,7 +5,7 @@ import Grid from '@material-ui/core/Grid'
 // import Host from '../../../../Assets/host.png'
 import Paper from '@material-ui/core/Paper'
 import Typography from '@material-ui/core/Typography'
-
+import BookClubs from '../../../Assets/7.png'
 
 const useStyles = makeStyles({
   avatar: {
@@ -26,6 +26,7 @@ const useStyles = makeStyles({
   },
   header: {
     color: '#5B4FED',
+    marginLeft: 30,
   }
 });
 
@@ -34,17 +35,16 @@ export default function LetterAvatars() {
 
   return (
     <div>
-
+    <Typography className={classes.header}><b>Current Book Clubs</b>
+    </Typography> 
     <Paper className={classes.paperDiv}>
 
     <Grid container justify="center" alignItems="center">
     <Paper className={classes.paper}>
-    <Typography className={classes.header}><b>Book Clubs!</b>
-    </Typography>
+  
     <Grid container justify="center" alignItems="center">
-    <i class="material-icons">keyboard_arrow_left</i>
-      <img alt="Remy Sharp" src="http://i67.tinypic.com/wk4bh2.png" className={classes.bigAvatar} />
-      <img alt="Remy Sharp" src="http://i67.tinypic.com/wk4bh2.png" className={classes.bigAvatar} />
+      <i class="material-icons">keyboard_arrow_left</i>
+      <img alt="favorites" src={BookClubs} />
       <i class="material-icons">keyboard_arrow_right</i>
     </Grid>
     

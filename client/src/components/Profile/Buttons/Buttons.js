@@ -48,7 +48,7 @@ export default function LetterAvatars() {
     <Paper className={classes.paper}>
     <Typography className={classes.header}><b>Friends</b>
     </Typography>
-    <Typography><b> 0 </b>
+    <Typography><b> 7 </b>
     </Typography>
     </Paper>
 

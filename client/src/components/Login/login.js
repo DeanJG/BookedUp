@@ -26,7 +26,7 @@ class Login extends Component {
         }
       </div>
       </div>
-<Style />
+        {/* <Style /> */}
 
       </div>
     )

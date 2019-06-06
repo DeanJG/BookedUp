@@ -60,10 +60,10 @@ function ComplexGrid(props) {
                   Club Spotlight
                 </Typography>
                 <Typography className={classes.BookTitle} variant="h6" gutterBottom>
-                  BOOK TITLE HERE
+                  Queen Bey
                 </Typography>
                 <Typography variant="body2" color="textSecondary">
-                  Description Here. Beyonce is the best queeen ever. Read this book if you're a beyonce fan like justin.
+                  Beyonce is theeee queen of queens. Read this book if you're a beyonce fan like ya boi Justin.
                 </Typography>
               </Grid>
               <Grid item>

@@ -5,7 +5,7 @@ import Grid from '@material-ui/core/Grid'
 // import Host from '../../../../Assets/host.png'
 import Paper from '@material-ui/core/Paper'
 import Typography from '@material-ui/core/Typography'
-import Hosting from '../../../Assets/Hosting.png'
+import Hosting from '../../../Assets/hostingbook.png'
 
 const useStyles = makeStyles({
   avatar: {

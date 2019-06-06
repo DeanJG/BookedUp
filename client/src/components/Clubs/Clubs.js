@@ -3,10 +3,7 @@ import CardDropDown from './CardDropDown';
 import CardDropDown2 from './CardDropDown2';
 import TopNavi from './TopNavi'
 import Header from './Header'
-
-
-
-
+import NavBar from '../Navbar';
 
 export default class Clubs extends Component {
 
@@ -20,7 +17,7 @@ export default class Clubs extends Component {
 
             <CardDropDown2 />
             <CardDropDown />
-
+            <NavBar />
             </div>
 
             </>

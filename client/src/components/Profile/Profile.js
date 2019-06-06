@@ -5,6 +5,7 @@ import Hosting from './Hosting';
 import BookClub from './BookClub';
 import Favorites from './Favorites';
 import TopNavi from './TopNavi';
+import NavBar from '../Navbar';
 
 
 export default class Profile extends Component {
@@ -19,6 +20,7 @@ export default class Profile extends Component {
             <Hosting/>
             <BookClub/>
             <Favorites/>
+            <NavBar />
             </div>
         )
     }

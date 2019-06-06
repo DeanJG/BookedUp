@@ -1,22 +1,22 @@
 import React, { Component } from 'react'
-import TopPart from './Toppart'
-import StepBar from './StepBar'
-import HostLine from './HostLine';
-import MembersLine from './MembersLine';
-import DiscussionBoard from './DiscussionBoard';
+import CardDropDown from './CardDropDown';
+import TopNavi from './TopNavi'
+
+
+
 
 export default class Clubs extends Component {
 
     render () {
         return (
             <>
-        <TopPart />
-        <StepBar />
-        <HostLine />
-        <MembersLine />
-        <DiscussionBoard/>
+            <div style={{marginTop: '70px', marginBottom: '85px'}}>
 
-            <h1>:)</h1>
+            <TopNavi />
+
+            <CardDropDown />
+            </div>
+
             </>
         )
     }

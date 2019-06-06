@@ -37,7 +37,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 function TopNavi() {
-  const classes = useStyles();
+  const classes = useStyles()
   return (
     <div className={classes.root}>
       <AppBar className={classes.appBar} position="fixed">

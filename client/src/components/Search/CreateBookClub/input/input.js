@@ -2,7 +2,8 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
-
+import { Link } from 'react-router-dom';
+import IconButton from '@material-ui/core/IconButton';
 
 const useStyles = makeStyles(theme => ({
   container: {
@@ -230,9 +231,13 @@ function TextFields() {
       </TextField>
     <div className={classes.btn}
     >
-    <Button variant="contained" className={classes.button}>
-    Create New Book Club
-    </Button>
+   <Button className={classes.button}>
+        <IconButton className={classes.logo} component={ Link } to='/clubs'>
+          </IconButton>
+        Create New Book Club
+        <IconButton className={classes.logo} component={ Link } to='/clubs'>
+          </IconButton>
+          </Button>
     </div>
     </form>
    

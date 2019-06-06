@@ -91,7 +91,7 @@ class App extends Component {
                 <Route path='/searchresult' component={SearchResult} />
                 <Route path='/searchedbook' component={SearchedBook} />
                 <Route path='/searchedclub' component={SearchedClub} />
-                <Route path='/createClub' component={CreateClub} />
+                <Route path='/createclub' component={CreateClub} />
 
 
 

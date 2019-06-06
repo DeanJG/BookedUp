@@ -31,9 +31,6 @@ export default function LetterAvatars() {
 
   return (
     <div>
-    <Typography className={classes.header}><b>Current Members</b>
-    </Typography>
-
     <Paper className={classes.paper}>
 
     <Grid container alignItems="left">

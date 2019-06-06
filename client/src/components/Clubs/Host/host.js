@@ -5,7 +5,7 @@ import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Avatar from '@material-ui/core/Avatar';
 import Typography from '@material-ui/core/Typography';
-import Host from '../../../Assets/Justin.png'
+import Host from '../../../Assets/Deansmall.png'
 
 const styles = theme => ({
   root: {
@@ -29,8 +29,6 @@ function AutoGridNoWrap(props) {
 
   return (
     <div className={classes.root}>
-      <Typography className={classes.header}><b>Host</b></Typography>
-
       <Paper className={classes.paper}>
          <Avatar>
          <img alt="Remy Sharp" src={Host} />

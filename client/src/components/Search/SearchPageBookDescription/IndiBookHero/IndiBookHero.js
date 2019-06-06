@@ -9,7 +9,9 @@ import Grid from '@material-ui/core/Grid';
 import Fab from '@material-ui/core/Fab';
 import AddIcon from '@material-ui/icons/Favorite';
 import BookPic from '../../../../Assets/50Shades.png';
-
+import { Link } from 'react-router-dom';
+import IconButton from '@material-ui/core/IconButton';
+import { withTheme } from '@material-ui/styles';
 
 
 const useStyles = makeStyles({
@@ -45,6 +47,7 @@ const useStyles = makeStyles({
     textAlign: 'center',
     marginTop: '20px',
   },
+
 });
 
 function MediaCard() {
@@ -68,10 +71,15 @@ function MediaCard() {
         <Fab size="small" color="secondary" aria-label="Add" className={classes.fabIcon}>
           <AddIcon /><br></br>
         </Fab>
-        <Button variant="contained" className={classes.button}>
+
+        <Button className={classes.button}>
+        <IconButton className={classes.logo} component={ Link } to='/createclub'>
+          </IconButton>
         Create New Book Club
-      </Button>
-       
+        <IconButton className={classes.logo} component={ Link } to='/createclub'>
+          </IconButton>
+          </Button>
+
         </Typography>
     
         <Typography className={classes.BookBio} variant="body2" color="textSecondary">

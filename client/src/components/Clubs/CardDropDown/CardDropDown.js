@@ -67,7 +67,7 @@ function CustomizedExpansionPanels() {
     <div>
       <ExpansionPanel square onChange={handleChange('panel1')}>
         <ExpansionPanelSummary  style={{flex: 'none', textAlign: 'center', padding: 'none'}} aria-controls="panel1d-content" id="panel1d-header">
-          <Typography>The Beehive Readers</Typography>
+          <Typography>Oh, Bee Hive!</Typography>
         </ExpansionPanelSummary >
 
 

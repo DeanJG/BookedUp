@@ -35,8 +35,8 @@ export default function SimpleCard() {
   return (
     <Card className={classes.card}>
       <CardContent>
-      <img className={classes.img} alt="complex" src="http://i67.tinypic.com/wk4bh2.png" />
-      <Input />
+        <img className={classes.img} alt="complex" src="http://i63.tinypic.com/2sb9374.png" />
+        <Input />
 
       </CardContent>
     </Card>

@@ -39,7 +39,7 @@ export default function LetterAvatars() {
 
     <Grid container justify="center" alignItems="center">
     <Paper className={classes.paper}>
-    <Typography className={classes.header}><b>Book Clubs!</b>
+    <Typography className={classes.header}><b>Popular Books!</b>
     </Typography>
     <Grid container justify="center" alignItems="center">
     <i class="material-icons">keyboard_arrow_left</i>

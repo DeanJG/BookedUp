@@ -3,6 +3,8 @@ import TopNavi from './TopNavi'
 import SearchBar from './SearchBar'
 import Spotlight from './Spotlight'
 import Navbar from '../../Navbar'
+import NewlyAddedClubs from './NewlyAddedClubs';
+import PopularBooks from '../PopularBooks';
 
 export default class Search extends Component {
     // creating our state book with an empty array, to pass into our function 
@@ -47,6 +49,8 @@ export default class Search extends Component {
                         synopsis={this.state.book.synopsis}
                     />
                     <Navbar />
+                    <NewlyAddedClubs/>
+                    <PopularBooks/>
                 </div>
             </div>
         )

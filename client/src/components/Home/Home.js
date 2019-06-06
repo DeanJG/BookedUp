@@ -10,11 +10,6 @@ export default class Home extends Component {
             <div style={{marginTop: '85px', marginBottom: '85px'}}>
                 <TopNavi />
                 <Cards />
-                <Cards />
-                <Cards />
-                <Cards />
-                <Cards />
-                <Cards />
                 <NavBar />
 
 

@@ -58,10 +58,10 @@ function MediaCard() {
 
         <CardContent>
         <Typography className={classes.BookTitle} variant="h6" gutterBottom>
-        Name Goes Here! (John Doe) 
-        <Fab size="small" color="secondary" aria-label="Add" className={classes.fabIcon}>
+        Dean Gutterman
+        {/* <Fab size="small" color="secondary" aria-label="Add" className={classes.fabIcon}>
           <AddIcon />
-        </Fab>
+        </Fab> */}
         </Typography>
        
        

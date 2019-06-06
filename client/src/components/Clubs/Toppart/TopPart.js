@@ -41,7 +41,7 @@ const useStyles = makeStyles({
 });
 
 function MediaCard() {
-  const classes = useStyles();
+  const classes = useStyles()
 
   return (
     <Card className={classes.card}>

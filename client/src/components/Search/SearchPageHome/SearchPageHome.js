@@ -3,6 +3,8 @@ import TopNavi from './TopNavi'
 import SearchBar from './SearchBar'
 import Spotlight from './Spotlight'
 import Navbar from '../../Navbar'
+import NewlyAddedClubs from './NewlyAddedClubs';
+import PopularBooks from '../PopularBooks';
 
 
 
@@ -15,6 +17,8 @@ export default class Search extends Component {
             <SearchBar />
             <Spotlight />
             <Navbar />
+            <NewlyAddedClubs/>
+            <PopularBooks/>
 
             </div>
 

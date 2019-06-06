@@ -42,8 +42,10 @@ export default function LetterAvatars() {
     <Typography className={classes.header}><b>Hosting!</b>
     </Typography>
     <Grid container justify="center" alignItems="center">
+    <i class="material-icons">keyboard_arrow_left</i>
       <img alt="Remy Sharp" src="http://i67.tinypic.com/wk4bh2.png" className={classes.bigAvatar} />
       <img alt="Remy Sharp" src="http://i67.tinypic.com/wk4bh2.png" className={classes.bigAvatar} />
+      <i class="material-icons">keyboard_arrow_right</i>
     </Grid>
     
 

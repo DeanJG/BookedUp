@@ -3,9 +3,6 @@ import TopNavi from './TopNavi'
 import SearchBar from './SearchBar'
 import Spotlight from './Spotlight'
 import Navbar from '../../Navbar'
-import SearchPageResult from '../SearchPageResult'
-
-
 
 export default class Search extends Component {
     // creating our state book with an empty array, to pass into our function 
@@ -50,7 +47,6 @@ export default class Search extends Component {
                         synopsis={this.state.book.synopsis}
                     />
                     <Navbar />
-                    <SearchPageResult />
                 </div>
             </div>
         )

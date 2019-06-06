@@ -4,7 +4,7 @@ const app = express()
 
 // const cors = require('cors')
 // app.use(cors)
-app.use(express.static(join(__dirname, 'client/build')))
+app.use(express.static(join(__dirname, 'client', 'build')))
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 

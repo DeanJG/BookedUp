@@ -59,8 +59,13 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-function SearchAppBar() {
-  const classes = useStyles();
+function SearchAppBar(props) {
+  const classes = useStyles()
+  console.log(props)
+  const [title, setTitle] = React.useState('')
+  function updateTitle(e) {
+    setTitle(e.target.value)
+  }
   return (
     <div className={classes.root}>
         <Toolbar>
@@ -72,11 +77,15 @@ function SearchAppBar() {
             </div>
             <InputBase
               placeholder="Search…"
+              id="title"
+              value={title}
               classes={{
                 root: classes.inputRoot,
                 input: classes.inputInput,
               }}
+              onChange={updateTitle}
             />
+            <button onClick={() => props.getBookInfo(title)}>Search</button>
           </div>
         </Toolbar>
     </div>

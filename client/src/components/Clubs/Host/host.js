@@ -5,6 +5,7 @@ import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Avatar from '@material-ui/core/Avatar';
 import Typography from '@material-ui/core/Typography';
+import Host from '../../../Assets/Justin.png'
 
 const styles = theme => ({
   root: {
@@ -14,27 +15,27 @@ const styles = theme => ({
   },
   paper: {
     maxWidth: 400,
-    margin: `${theme.spacing(1)}px auto`,
-    padding: theme.spacing(2),
+    padding: 10,
+    margin: '10px 0px 10px 0px',
+
   },
+  header: {
+    paddingTop: 10,
+    color: '#5B4FED',
+  }
 });
-
-const message = `This Will be the Discussion board.`;
-
 function AutoGridNoWrap(props) {
   const { classes } = props;
 
   return (
     <div className={classes.root}>
+      <Typography className={classes.header}><b>Host</b></Typography>
+
       <Paper className={classes.paper}>
-        <Grid container wrap="nowrap" spacing={2}>
-          <Grid item>
-            <Avatar>W</Avatar>
-          </Grid>
-          <Grid item xs>
-            <Typography>{message}</Typography>
-          </Grid>
-        </Grid>
+         <Avatar>
+         <img alt="Remy Sharp" src={Host} />
+
+         </Avatar>
       </Paper>
     </div>
   );

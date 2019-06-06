@@ -2,11 +2,11 @@ import React, { Component } from 'react'
 import Home from './components/Home'
 import Clubs from './components/Clubs'
 import Profile from './components/Profile'
-import Search from './components/Search/SearchPageHome'
 import SearchResult from './components/Search/SearchPageResult'
 import SearchedBook from './components/Search/SearchPageBookDescription'
 import SearchedClub from './components/Search/SearchPageClubDescription'
 import CreateClub from './components/Search/CreateBookClub'
+import Search from './components/Search/SearchPageHome'
 import Navbar from './components/Navbar'
 import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom'
 import './App.css'
@@ -39,14 +39,7 @@ class App extends Component {
   state = {
     isSignedIn: false
   }
-  getBooks = () => {
-    console.log('hi nina')
-    //axios.get('/books)
-    fetch('/books')
-      .then(r => r.json())
-      .then(books => console.log(books))
-      .catch(e => console.log(e))
-  }
+
   getUsers = () => {
     console.log('getting users')
     //axios.get('/users)
@@ -74,7 +67,7 @@ class App extends Component {
   componentDidMount() {
     this.unregisterAuthObserver = firebase.auth().onAuthStateChanged(
       (user) => this.setState({ isSignedIn: !!user })
-    );
+    )
   }
   componentWillUnmount() {
     this.unregisterAuthObserver();

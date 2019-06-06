@@ -14,7 +14,6 @@ export default class Search extends Component {
             // Search Results
             <div style={{marginTop: '65px', marginBottom: '85px'}}>
             <TopNavi />
-            <SearchBar />
             <p style={{margin: '20px'}}><b style={{color: '#5B4FED'}}>Book(s)</b> matching "50 Shades of Grey"</p>
            <BookSearchResult />
            <br />

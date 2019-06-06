@@ -9,11 +9,19 @@ module.exports = app => {
             .then(books => res.json(books))
             .catch(e => console.log(e))
     })
+
     // GET a book 
-    app.get('/books/:id', (req, res) => {
-        console.log('ping')
-        db.Book.findOne({ where: {id: req.params.id } })
-            .then(book => res.json(book))
+    // app.get('/books/:id', (req, res) => {
+    //     console.log('ping')
+    //     db.Book.findOne({ where: { id: req.params.id } })
+    //         .then(books => res.json(books))
+    //         .catch(e => console.log(e))
+    // })
+
+    app.get('/books/:title', (req, res) => {
+        console.log(req.params.title)
+        db.Book.findOne({ where: { title: req.params.title } })
+            .then(books => res.json(books))
             .catch(e => console.log(e))
     })
 

@@ -26,7 +26,7 @@ firebase.initializeApp(config);
 
 const uiConfig = {
   signInFlow: 'popup',
-  signInSuccessUrl: '/home',
+  signInSuccessUrl: '/',
  
   signInOptions: [
     firebase.auth.GoogleAuthProvider.PROVIDER_ID,
@@ -38,24 +38,6 @@ const uiConfig = {
 class App extends Component {
   state = {
     isSignedIn: false
-  }
-
-  getUsers = () => {
-    console.log('getting users')
-    //axios.get('/users)
-    fetch('/users')
-      .then(r => r.json())
-      .then(users => console.log(users))
-      .catch(e => console.log(e))
-  }
-  getFriends = () => {
-    console.log('getting friends..')
-    fetch(`/users/1/friends`)
-      .then(r => r.json())
-      .then(friends => friends.friendList.forEach(friend => {
-        console.log(friend.name)
-      }))
-      .catch(e => console.log(e))
   }
 
   componentWillMount() {
@@ -79,12 +61,14 @@ class App extends Component {
         <>
           <Router>
             <div>
-              <nav>
-              <Navbar />
-
-               </nav>
               <Switch>
-                <Route path='/home' component={Home} />
+                <Route exact path='/' component={() => {
+                  if (isSignedIn) {
+                    return <Home />
+                  } else {
+                    return <Login uiConfig={uiConfig} isSignedIn={isSignedIn}/>
+                  }
+                }} />
                 <Route path='/search' component={Search} />
                 <Route path='/clubs' component={Clubs} />
                 <Route path='/profile' component={Profile} />
@@ -92,41 +76,12 @@ class App extends Component {
                 <Route path='/searchedbook' component={SearchedBook} />
                 <Route path='/searchedclub' component={SearchedClub} />
                 <Route path='/createClub' component={CreateClub} />
-
-
-
-
               </Switch>
             </div>
             <div>
               <Route exact path='/login' component={() => <Login uiConfig={uiConfig} isSignedIn={isSignedIn} />} />
-
             </div>
           </Router>
-  
-
-
-          {/* <div>
-            <div style={{ textAlign: 'center' }}>
-              <div>Email</div>
-              <input id="Email" placeholder="Please Enter Email." type="text"></input>
-            </div>
-            <div>
-              <div>
-                <div style={{ textAlign: 'center' }}>
-                  <div>Password</div>
-                  <input id="password" placeholder="Please Enter Password." type="text"></input>
-                </div>
-              </div> */}
-              <div style={{ textAlign: 'center' }}>
-                <button style={{ margin: '12px' }} onClick={this.login}>Login</button>
-                <button style={{ margin: '12px' }} onClick={this.Signup}>Signup</button>
-                <button style={{ margin: '12px' }} onClick={this.getBooks}>Books</button>
-                <button style={{ margin: '12px' }} onClick={this.getUsers}>Users</button>
-                <button style={{ margin: '12px' }} onClick={this.getFriends}>Friends</button>
-              </div>
-            {/* </div>
-          </div> */}
 
         </>
       )

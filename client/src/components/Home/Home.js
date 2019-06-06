@@ -4,6 +4,7 @@ import Cards from './Cards'
 import NavBar from '../Navbar'
 
 
+
 export default class Home extends Component {
     render () {
         return (

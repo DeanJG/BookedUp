@@ -9,21 +9,20 @@ import Logo from '../../Assets/Logo.png'
 
 class Login extends Component {
   render() {
-    const { IsSignedIn, uiConfig } = this.props
+    const { isSignedIn, uiConfig } = this.props
     return (
       <div>
       <div style={{marginTop: '80px', textAlign: 'center'}}>
        <img alt="logo" src={Logo}/>
 
       <div className="Login">
-        {IsSignedIn ? (
-          <button color='secondary' onClick={() => firebase.auth().signOut()}>Sign Out...</button>
+        {isSignedIn ? (
+          <Button color='secondary' onClick={() => firebase.auth().signOut()}>
+            Sign Out..
+          </Button>
         )
           :
-          <StyledFirebaseAuth
-            uiConfig={uiConfig}
-            firebaseAuth={firebase.auth()}
-          />
+          <StyledFirebaseAuth uiConfig={uiConfig} firebaseAuth={firebase.auth()} />
         }
       </div>
       </div>

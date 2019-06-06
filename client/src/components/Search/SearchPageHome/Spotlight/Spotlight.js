@@ -50,20 +50,20 @@ function ComplexGrid(props) {
         <Grid className={classes.gridStyle} container spacing={2}>
           <Grid item>
             <ButtonBase className={classes.image}>
-              <img className={classes.img} alt="complex" src="http://i67.tinypic.com/wk4bh2.png" />
+              <img className={classes.img} alt="complex" src={props.cover} />
             </ButtonBase>
           </Grid>
           <Grid item xs={12} sm container>
             <Grid item xs container direction="column" spacing={2}>
               <Grid item xs>
                 <Typography gutterBottom variant="subtitle1">
-                  Club Spotlight
+                  {props.author}
                 </Typography>
                 <Typography className={classes.BookTitle} variant="h6" gutterBottom>
-                  BOOK TITLE HERE
+                  {props.title}
                 </Typography>
                 <Typography variant="body2" color="textSecondary">
-                  Description Here. Beyonce is the best queeen ever. Read this book if you're a beyonce fan like justin.
+                  {props.synopsis}
                 </Typography>
               </Grid>
               <Grid item>

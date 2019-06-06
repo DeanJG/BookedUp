@@ -66,13 +66,16 @@ function SearchAppBar(props) {
   function updateTitle(e) {
     setTitle(e.target.value)
   }
+  console.log('here are props: ', props)
   return (
     <div className={classes.root}>
         <Toolbar>
           <div className={classes.search}>
             <div className={classes.searchIcon}>
-            <IconButton component={ Link } to='/searchedbook'>
-              <SearchIcon />
+              <IconButton component={ Link } to='/searchedbook'>
+                {/* <div onClick={() => props.getBookInfo(title)}>
+                  <SearchIcon />
+                </div> */}
               </IconButton>
             </div>
             <InputBase
@@ -85,8 +88,8 @@ function SearchAppBar(props) {
               }}
               onChange={updateTitle}
             />
-            <button onClick={() => props.getBookInfo(title)}>Search</button>
           </div>
+          <button onClick={() => props.getBookInfo(title)}>fdioafdoia</button>
         </Toolbar>
     </div>
   );
